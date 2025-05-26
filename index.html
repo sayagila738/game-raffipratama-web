@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>🎮 RAFFI PRATAMA</title>
+  
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  
+  <style>
+    /* RESET */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #6e00ff, #f0eaff);
+      color: #dddaf6;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      padding: 20px;
+      text-align: center;
+      user-select: none;
+      overflow-x: hidden;
+    }
+
+    header {
+      font-family: 'Orbitron', sans-serif;
+      font-weight: 700;
+      font-size: 3.2rem;
+      color: #cbb9ff;
+      text-shadow:
+        0 0 8px #b99cff,
+        0 0 20px #6e00ff,
+        0 0 30px #a770ef;
+      animation: neonGlow 3s ease-in-out infinite alternate;
+      margin-bottom: 20px;
+    }
+
+    /* Subtitle */
+    header + p {
+      font-weight: 600;
+      font-size: 1.2rem;
+      color: #d9cbff;
+      text-shadow: 0 0 6px #9b4dff;
+      margin-bottom: 40px;
+      animation: fadeInUp 1.5s ease forwards;
+      opacity: 0;
+      animation-delay: 0.3s;
+    }
+
+    /* Game Buttons Container */
+    .game-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      animation: fadeInUp 1.8s ease forwards;
+      opacity: 0;
+      animation-delay: 0.8s;
+      margin-bottom: 50px;
+    }
+
+    /* Each Game Button */
+    .game-btn {
+      background: rgba(255, 255, 255, 0.15);
+      border: 3px solid #b99cff;
+      border-radius: 50%;
+      width: 160px;
+      height: 160px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #d9cbff;
+      font-weight: 700;
+      font-size: 1.2rem;
+      letter-spacing: 1.3px;
+      text-decoration: none;
+      box-shadow:
+        0 0 8px #a770ef,
+        inset 0 0 15px #9b4dff;
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .game-btn::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      border-radius: 50%;
+      box-shadow: 0 0 12px #a770ef, 0 0 30px #b99cff;
+      opacity: 0.6;
+      transition: opacity 0.3s ease;
+      z-index: 0;
+    }
+
+    .game-btn:hover::before {
+      opacity: 1;
+      box-shadow:
+        0 0 18px #d6a4ff,
+        0 0 40px #d6a4ff,
+        0 0 60px #c3a7ff;
+    }
+
+    .game-btn:hover {
+      color: #fff;
+      transform: scale(1.15);
+      box-shadow:
+        0 0 20px #d6a4ff,
+        inset 0 0 30px #d6a4ff;
+      z-index: 1;
+    }
+
+    /* Footer */
+    footer {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 500;
+      font-size: 0.9rem;
+      color: #cbb9ff;
+      text-shadow: 0 0 6px #6e00ff;
+      margin-top: auto;
+      animation: fadeInUp 2s ease forwards;
+      opacity: 0;
+      animation-delay: 1.4s;
+    }
+
+    /* Animations */
+
+    @keyframes neonGlow {
+      0%, 100% {
+        color: #cbb9ff;
+        text-shadow:
+          0 0 8px #b99cff,
+          0 0 20px #6e00ff,
+          0 0 30px #a770ef;
+      }
+      50% {
+        color: #d6a4ff;
+        text-shadow:
+          0 0 16px #d6a4ff,
+          0 0 30px #a770ef,
+          0 0 40px #d6a4ff,
+          0 0 60px #d6a4ff;
+      }
+    }
+
+    @keyframes fadeInUp {
+      0% {
+        opacity: 0;
+        transform: translateY(25px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Responsive */
+    @media (max-width: 700px) {
+      .game-btn {
+        width: 120px;
+        height: 120px;
+        font-size: 1rem;
+      }
+
+      header {
+        font-size: 2.4rem;
+      }
+
+      header + p {
+        font-size: 1rem;
+        margin-bottom: 30px;
+      }
+    }
+
+  </style>
+</head>
+<body>
+
+  <header>🎮 RAFFI PRATAMA</header>
+  <p>Tersedia game seru pilihan khusus untuk umur 14+ — mainkan sekarang!</p>
+
+  <div class="game-container">
+    <a href="https://www.friv.com/z/games/tictactoexxo/game.html" target="_blank" class="game-btn" rel="noopener noreferrer" aria-label="Mainkan Tic Tac Toe">
+      TIC TAC TOE
+    </a>
+
+    <a href="https://www.friv.com/z/games/fireboyandwatergirlforest/game.html" target="_blank" class="game-btn" rel="noopener noreferrer" aria-label="Mainkan Fire and Water">
+      FIRE & WATER
+    </a>
+
+    <a href="https://www.friv.com/z/games/frivwordsearch/game.html" target="_blank" class="game-btn" rel="noopener noreferrer" aria-label="Mainkan Word Search">
+      WORD SEARCH
+    </a>
+  </div>
+
+  <footer>
+    © 2025 RAFFI PRATAMA — Game Portal Seru & Terpercaya
+  </footer>
+
+</body>
+</html>
